@@ -49,10 +49,23 @@ public class Main
     //Problem 1
     Scanner sc = new Scanner(System.in);
     String input = "";
-    
+    ArrayList<String> words = new ArrayList<String> ();
     while (!input.equals("STOP"))
     {
-      System.out.println("infinite loop! replace with your code");
+      System.out.println("Enter words:");
+      input = sc.nextLine();
+      words.add(input);
+    }
+    words.remove(words.size()-1);
+    System.out.println(words);
+    ArrayList<String> reverseWords = new ArrayList<String>();
+    for (int i = words.size()-1; i >= 0; i--)
+    {
+      reverseWords.add(words.get(i));
+    }
+    for (int i = 0; i < words.size(); i ++)
+    {
+      System.out.println(reverseWords.get(i) + words.get(i));
     }
   }
 
